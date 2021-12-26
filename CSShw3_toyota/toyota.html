@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/cssreset.css">
+    <style>
+        h1{
+            font-family:中黑;
+            font-size: 40px;
+            margin-top: 40px;
+            margin-bottom:12px ;           
+            text-align: center;
+        }
+        .line{
+            border-top:20px ;
+            width:43px;
+            height: 5px;
+            background-color: black;
+            margin: auto;           
+        }
+        header nav{
+            text-align: center;
+            
+            
+        }
+        header nav a{
+            display: inline-block;
+            font-size: 20px;            
+            color: inherit;            
+            width: 200px;
+            line-height: 30px;
+            border: 1px dotted black;
+            border-bottom:2px solid #a72944 ;
+            padding: 2px;
+            text-decoration: none;
+            margin-top:40px; 
+            margin-right: 5px;
+            position: relative; 
+            overflow: hidden;                  
+        }
+        a::before{
+            position: absolute;
+            content:'';
+            top: 100%;
+            left: 0;
+            bottom: 0;            
+            width: 100%;
+            height: 100%;            
+            background: #a72944;
+            transition: 1s; 
+            z-index: -1;          
+
+        }
+        a:hover{
+            color: white;
+        }
+        a:hover::before{
+            top:0;
+        }
+        
+        .group{
+            margin-top: 200px;            
+            display: flex;
+            justify-content: center;          
+            position: relative;           
+        }      
+        .group .standard{
+            width: 480px;
+            height: 350px;
+            background-color: black;
+            position: relative;           
+            top:-120px;
+            left: 160px;
+            
+            display: flex;
+            flex-direction: column;
+            transition:1s;
+        }       
+        .group:hover .standard{
+            left: 200px;
+        }
+        .group .txt{
+            width:630px;
+            height: 300px;
+            background-color: rgb(235, 235, 225);
+            position: absolute;
+            bottom: -300px;
+            left: 180px;
+            transition: 1s;
+                      
+        }       
+        .group:hover .txt{
+            bottom: -200px;
+        }
+        .group .blank{
+            width: 650px;
+            height: 300px;
+            background-color: rgb(212, 194, 194);
+            position: relative;
+            top:-80px;
+            right: 200px;
+            z-index: -1;
+            opacity: 0.1;
+            transition: 1s;
+        }
+        .group:hover .blank{
+            right: 250px;
+        }
+        .group .title{
+            width:100%;
+            height:120px;
+            background-color: crimson;
+            text-align: center;
+        }
+        .group .title p{
+            color: white;
+            text-align:center;
+            line-height: 100px;
+            padding: 10px;
+            font-size: 50px; 
+                      
+        }
+        .group .title .spn1{
+            font-size: 80px;
+            transform: rotate(-30deg);
+        }
+        .group .sub-standard{
+            color: white;
+        }
+        .group .sub-standard .sub1{
+            font-size: 25px;
+            padding: 15px;
+        }
+        .group .sub-standard .sub2{
+            font-size:20px ;
+            padding: 15px;
+            line-height: 30px;
+            
+        }
+        .group .txt-title{
+            font-size: 18px;
+            padding: 15px;
+            color: #a72944;
+        }
+        .group .li1{
+            width: 110px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-left:20px ;
+            
+        }
+        .group .li2{
+            width: 130px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-left:20px ;
+        }
+        .group .li3{
+            width: 130px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-left:20px ;
+        }
+        .group .txt ul{
+            margin-left: 15px;
+            padding: 10px;
+        }
+        .break{
+            margin-top: 500px;
+        }
+        .group .tube img{
+            position: absolute;
+            top: 250px;
+            right: 400px;
+            width: 50px;
+        }
+        
+        .group2{
+            display: flex;
+            position: relative;
+            /* flex-wrap: wrap; */
+            /* justify-content: space-around; */
+            
+        }
+        .group2 .section{
+            width: 320px;
+            height: 350px;
+            background-color: black;                       
+            position: relative;
+            top:-120px;
+            right: 100px;
+            transition: 1s;
+        }
+        .group2:hover .section{
+            right:150px
+        }
+        .group2 .section .title{
+            width:100%;
+            height:120px;
+            background-color: crimson;
+            text-align: center;
+        }
+        .group2 .title p{
+            color: white;
+            text-align:center;
+            line-height: 100px;
+            padding: 10px;
+            font-size: 50px; 
+        }
+        .group2 p span{
+            font-size: 80px;
+        }
+        .group2 .mark{
+            color: white;
+        }
+        .group2 .mark .p1{
+            font-size: 25px;
+            padding: 15px;
+        }
+        .group2 .mark .p2{
+            font-size:20px ;
+            padding: 15px;
+            line-height: 30px;
+        }
+        .group2 .feature{
+            width: 630px;
+            height: 230px;
+            background-color: rgb(235, 235, 225);
+            position: absolute;
+            left:600px;
+            top:400px;
+            transition: 1s;
+        }
+        .group2:hover .feature{
+            top:350px;
+        }
+        .group2 .blank{
+            width: 400px;
+            height: 300px;
+            background-color: rgb(212, 194, 194);
+            position: relative;
+            top:-90px;
+            left: 600px;
+            z-index: -1;
+            transition: 1s;
+        }
+        .group2:hover .blank{
+            top:-70px;
+        }
+        .group2 .fea1{
+            font-size: 18px;
+            padding: 15px;
+            color: #a72944;
+        }
+        .group2 ul{
+            margin-left: 15px;
+            padding: 10px;
+        }
+        .group2 .li1{
+            width: 110px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-left:20px ;
+        }
+        .group2 .li2{
+            width: 130px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-left:20px ;
+        }
+        
+        
+        
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>五大優勢</h1>
+        <div class="line"></div>
+
+        <nav>
+            <a href="#">操控樂趣</a>
+            <a href="#">安全守護</a>
+            <a href="#">乘坐舒適</a>
+            <a href="#">以人為本</a>
+            <a href="#">引以為傲</a>
+        </nav>
+        
+    </header>
+
+    <div class="group">
+        <div class="standard">
+            <div class="title">
+                <p><span class="spn1">01</span>操控樂趣</p>
+            </div>
+            <div class="sub-standard">
+                <div class="sub1">人人滿意的駕體驗</div>
+                <div class="sub2">透過最佳重分配，實現平順起步直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感。</div>
+            </div>
+            
+        </div>
+        <div class="txt">
+            <div class="txt-title">因為我們做了這些革新-------------------------------------------------------------------              
+            </div>            
+            <div class="li1">主動安全</div>
+            <ul>
+                <li>以先進的TSS系統，主動偵測路況，輔助駕駛判斷路況並維持行車安全</li>
+            </ul>
+
+            <div class="li2">被動安全</div>
+            <ul>
+                <li>堅固的高剛性車體，使用熱沖壓材料的高強度抗扭鋼板，強化座艙對意外事故的保護力。</li>
+            </ul>
+            <div class="li3">四輸獨立懸吊</div>
+            <ul>
+                <li>搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清晣路感回饋，提升駕馭樂趣。</li>
+            </ul>
+           
+            </div>
+        <div class="main">
+            <img src="https://picsum.photos/700/400/?random=1">
+            
+        </div>        
+
+        <div class="blank"></div>
+        <div class="tube">
+            <img src="/youtube.png" alt="">
+        </div>     
+    </div> 
+
+    <div class="break"></div>  
+
+    <div class="group2">
+        
+        <div class="blank"></div>
+        
+        <div class="main">
+            <img src="https://picsum.photos/700/400/?random=1">
+        </div>
+        <div class="section">
+            <div class="title">
+                <p><span>02</span>安全守護</p>
+            </div>
+            <div class="mark">
+                <p class="p1">行車更安心的高剛性車體</p>
+                <p class="p2">您的愛車會妥善保護您，強悍穩固的車身可使您安全無虞。世界級的安全功能讓您輕鬆自如享受旅程，亳無後顧之憂。</p>
+            </div>
+        </div> 
+        <div class="feature">
+            <div class="fea1">因為我們做了這些革新--------------------------------------------------------</div>
+            <div class="li1">低重心設計</div>
+            <ul>
+                <li>透過低重心設計，不僅是呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
+            </ul>
+
+            <div class="li2">車體剛性強化</div>
+            <ul>
+                <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</li>
+            </ul>
+        </div>
+        
+
+    </div>
+
+    <div class="break"></div>  
+
+    <div class="group">
+        <div class="standard">
+            <div class="title">
+                <p><span class="spn1">03</span>乘坐舒適</p>
+            </div>
+            <div class="sub-standard">
+                <div class="sub1">令人放鬆舒適的車室空間</div>
+                <div class="sub2">車室空間設計著重人體工學，透過方向盤，踏板等位置優化，追求更舒適的駕駛位置，提高座椅包覆性，實現長途駕駛不疲勞的舒適駕馭體驗。</div>
+            </div>
+            
+        </div>
+        <div class="txt">
+            <div class="txt-title">因為我們做了這些革新-------------------------------------------------------------------              
+            </div>            
+            <div class="li1">駕駛位置最佳化</div>
+            <ul>
+                <li>針對駕駛位置進行徹底的修改，讓駕馭者可如同握手般自然且舒適地操控方向盤。</li>
+            </ul>
+
+            <div class="li2">駕馭視野佳</div>
+            <ul>
+                <li>
+                    考量駕駛坐進車內的高度，透過前擋風玻璃位置的調整，達到盲區極小化，使駕駛視野更開闊，同步提升駕馭安全。
+                </li>
+            </ul>
+            <div class="li3">四輸獨立懸吊</div>
+            <ul>
+                <li>搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清晣路感回饋，提升駕馭樂趣。</li>
+            </ul>
+           
+            </div>
+        <div class="main">
+            <img src="https://picsum.photos/700/400/?random=1">
+            
+        </div>        
+
+        <div class="blank"></div>  
+        
+    </div> 
+
+    <div class="break"></div>  
+     
+
+    <div class="group2">
+        
+        <div class="blank"></div>
+        
+        <div class="main">
+            <img src="https://picsum.photos/700/400/?random=1">
+        </div>
+        <div class="section">
+            <div class="title">
+                <p><span>04</span>以人為本</p>
+            </div>
+            <div class="mark">
+                <p class="p1">使用者導向的貼心設計</p>
+                <p class="p2">藉由高度人性化的介面整合，傳遞車輛資訊，從提升油耗表現到行李廂空間，均細心考量，並給予即時回應。</p>
+            </div>
+        </div> 
+        <div class="feature">
+            <div class="fea1">因為我們做了這些革新--------------------------------------------------------</div>
+            <div class="li1">優異油耗表現</div>
+            <ul>
+                <li>以AURIS為例，更強勁的高效引擎將熱率提升至第40%，達到世界級水準，屢屢突破燃油敦率新境界。</li>
+            </ul>
+
+            <div class="li2">行李箱空間最適化</div>
+            <ul>
+                <li>以PRIUS為例，透過將電池位置移到後座下方，讓行李廂擁有更大的空間。</li>
+            </ul>
+        </div>
+        
+
+    </div>
+</body>
+
+</html>
