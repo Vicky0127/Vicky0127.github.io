@@ -1,0 +1,296 @@
+header{
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    top:0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 5px 0 rgb(175, 173, 166);
+    z-index: 10;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+}
+.navbar{
+    width: 1200px;
+    margin: auto;
+    height: 150px;
+    padding-top: 30px;
+}
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list a{
+    margin:10px;
+    text-decoration: none;
+    color: rgb(94, 88, 88);
+}
+.navbar-logo{
+    margin-top: 20px;
+}
+.empty{
+    height: 200px;
+    display: block;
+}
+.nav-btn{
+    line-height: 30px;
+    border: 1px solid rgb(190, 194, 194);
+    border-radius: 5px;
+    margin-left: 30px;
+    padding: 5px;
+}
+
+.creative-text{
+    margin: auto 30px;
+    width: 400px;
+}
+
+.creative-text h1{
+    font-size: 50px;
+    line-height: 60px;
+    
+}
+.creative-text p{
+    line-height: 20px;
+    margin-top: 10px;
+}
+.creative-pic{
+    padding-left: 50px;
+}
+.flex{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.col-btn a{
+    text-decoration: none;
+    color: white; 
+    border: 1px solid ;  
+    background-color: rgb(14, 238, 145);
+    padding: 10px;
+    border-radius: 6px;
+        
+}
+
+.col-btn{
+    margin-top: 20px;    
+}
+.col-play{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.contact{
+    line-height: 25px;
+    border: 1px solid rgb(184, 181, 179);
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin: 20px 0px 0px 20px;
+}
+.contact a{
+    text-decoration: none;   
+    color: rgb(122, 129, 129);
+}
+.services-card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.services-card .item{
+    width: 380px;
+    padding: 50px 30px 50px 30px;
+    margin: 10px;
+    line-height: 30px;
+    box-shadow: 0 0 40px rgb(128, 127, 123);
+    border-radius: 6px;
+}
+.item h2{
+    font-size: 30px;
+    margin: 20px 0px;
+}
+.services-title h1{
+    font-size: 40px;
+    width: 400px;
+    line-height: 55px;
+}
+.questions{
+    margin-top: 50px;
+}
+.subscribe{
+    line-height: 25px;
+    border: 1px solid rgb(184, 181, 179);
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin: 20px 0px 0px 20px;
+}
+.subscribe a{
+    text-decoration: none;   
+    color: rgb(122, 129, 129);
+}
+.choose{
+    background-color: rgb(27, 99, 233);
+}
+.choose-item{
+    background-color: rgb(61, 117, 223);
+    margin: 20px;
+    padding: 20px;
+    line-height: 30px;
+    height: 200px;
+}
+.choose-item h2{
+    font-size: 50px;
+    color: white;
+    margin-top: 20px;
+}
+.choose-item p{
+    color: white;
+    margin-top: 20px;
+}
+.choose-text{
+    margin: auto;
+    font-size: 15px;
+    color: white;
+    width: 400px;
+}
+.choose-text h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.choose-btn{
+    margin-top: 30px;
+}
+.choose-btn a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;  
+}
+
+.step-title h1{
+    font-size: 45px;
+    margin: 90px 0px;
+}
+.step .number{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    line-height: 30px;
+    
+}
+
+.number-text h2{
+    font-size: 23px;
+}
+.number-text{
+    width: 60%;
+}
+
+.projects-title{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    
+}
+.projects{
+    background-color: rgb(225, 229, 238);
+    height: 600px;
+    margin-top: 30px;
+    
+}
+.projects-title h1{
+    font-size: 45px;
+    width: 500px;
+    line-height: 50px;
+    margin-top: 30px;
+    
+}
+.projects-btn a{
+    text-decoration: none;
+    color: white; 
+    border: 1px solid ;  
+    background-color: rgb(14, 238, 145);
+    padding: 10px;
+    border-radius: 6px;
+    
+}
+.projects-btn{
+    margin-top: 80px;
+    
+}
+.projects .container{
+    width: 1200px;    
+    margin: auto;
+}
+
+.send .signup{
+    display: inline-flex;
+    flex-direction: column;    
+    background-color: white;
+    box-shadow: 0 0 2px rgb(153, 160, 160);
+    height: 500px;    
+}
+.signup input{
+    height: 50px;
+    margin: 15px 0;
+    border:1px solid rgb(107, 112, 112);
+    padding: 5px;
+}
+.send-content{
+    margin-top: 50px;
+}
+.signup p{
+    font-size: 30px;
+    line-height: 50px;
+}
+.signup button{
+    width: 80px;
+    height: 30px;
+    background-color: rgb(32, 245, 113);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.learnmore{    
+    margin: auto;
+    height: 300px;
+    background-color: rgb(253, 255, 255);    
+}
+.learnmore-title{
+    width: 600px;
+    margin: auto;    
+}
+.learnmore h2{
+    font-size: 50px;  
+    line-height: 50px;
+    margin-top: 60px;
+    text-align: center;
+}
+.input-group{
+    margin: auto;
+    width: 50%;
+}
+
+.learnmore button{
+    height: 40px;
+    background-color: rgb(66, 247, 66);
+    color: rgb(255, 255, 255);
+    margin-left: 0;
+}
+
+.link-part{
+    
+    line-height: 30px;
+}
+
+.link-part h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.link-part a, .link-part p{
+    text-decoration: none;
+    color: rgb(123, 126, 126);
+}

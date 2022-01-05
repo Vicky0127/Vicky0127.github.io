@@ -1,0 +1,370 @@
+body{    
+    margin: 0;
+    background-color: white;
+}
+header{
+    background-color: white;    
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;  
+    box-shadow: 3px 3px 5px rgb(221, 216, 216);  
+    z-index: 1;
+}
+.empty{
+    display: block;
+    position: relative;
+    height: 150px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{      
+    width: 1200px;
+    padding: 30px; 
+    line-height: 40px;
+    margin: auto;
+    
+}
+
+
+.nav-list a{
+    text-decoration: none;
+    margin: 13px;
+    color: rgb(90, 95, 95);
+}
+
+.nav-btn{
+    line-height: 40px;
+    border: 1px solid rgb(190, 194, 194);
+    border-radius: 5px;
+    margin-left: 30px;
+}
+
+.col-left{
+    width:100%;   
+}
+
+.sucess{
+    margin-top: 80px;
+    display: block;
+    position: relative;
+}
+.sucess .container{
+    margin-top: 100px;
+    
+}
+.sucess-title{
+    font-size: 55px;
+    line-height: 70px;
+}
+
+.passion-title{
+    font-size: 55px;
+    line-height: 80px;
+}
+
+p{
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.col-btn a{
+    text-decoration: none;
+    color: white; 
+    border: 1px solid ;  
+    background-color: rgb(14, 238, 145);
+    padding: 10px 20px 10px 20px;
+    border-radius: 6px;
+        
+}
+
+.col-btn{
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.col-botton{
+    justify-content:flex-start;
+    margin-top: 30px;    
+}
+.col-play{
+    margin-top: 20px;
+}
+
+.passion-title{
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.contact a{
+    text-decoration: none;   
+    color: rgb(122, 129, 129);
+}
+
+.contact{
+    line-height: 25px;
+    border: 1px solid rgb(184, 181, 179);
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;   
+}
+
+.services-title{
+    font-size: 40px;
+    line-height: 50px;
+    margin-left: 20px;
+}
+
+h2{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.services-card{
+    width: 340px;
+    padding: 20px;
+    margin: 10px;  
+    background-color: white;  
+    line-height: 60px;
+    /* box-shadow: 0px 0px 2px 0px rgb(189, 192, 192); */
+    filter:drop-shadow(0 0 3px rgb(158, 152, 152));
+    border-radius: 6px;
+}
+
+.services-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.services-card a{
+    text-decoration: none;
+    color: rgb(76, 78, 78);
+    font-size: 15px;
+    
+}
+.services p{
+    color: rgb(128, 132, 133);
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-title{
+    font-size: 45px;
+}
+.subscribe{
+    line-height: 25px;
+    border: 1px solid rgb(184, 181, 179);
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;   
+}
+.subscribe a{
+    text-decoration: none;   
+    color: rgb(122, 129, 129);
+}
+
+.choose{
+    width:100%;
+    background-color: rgb(51, 120, 211);
+}
+
+.item{
+    background-color: rgba(155, 154, 224, 0.2);      
+    width: 240px;
+    padding: 40px 20px 40px 20px;
+    margin: 10px;
+    border-radius: 8px;    
+}
+.choose .item p{
+    color: white;
+    line-height: 30px;
+    font-size: 15px;
+    z-index: 1;
+}
+.choose .row{
+    display: flex;
+    justify-content: center;
+    
+}
+.choose-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 700px;
+}
+
+.item span{
+    font-size: 40px;
+    color: white;
+}
+.choose-title{
+    font-size: 40px;
+    color: white;
+}
+.choose-text{
+    width:400px;
+    padding-top: 100px;
+}
+.choose-text p{
+    color: white;
+}
+.choose-btn a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;    
+}
+.choose-btn{
+    margin-top: 20px;
+}
+
+.steps{
+    margin-top: 50px;
+}
+.steps .step{
+    display: flex;
+    justify-content: space-between;
+}
+
+.step-title h1{
+    font-size: 50px;
+}
+
+.steps .row01{
+    margin-top:50px;    
+    margin-left: 8%;
+}
+
+.steps .row02{
+    margin-top:50px;
+    flex-direction: row-reverse;
+    margin-left: 20%;
+}
+
+.steps .row03{
+    margin-top:50px;
+    margin-left: 4%;
+}
+
+.steps .row04{
+    margin-top:50px;
+    flex-direction: row-reverse;
+    margin-left: 10%;
+}
+
+.steps .row05{
+    margin-top:50px;
+    margin-left: 8%;
+}
+.step-text{    
+    width: 400px;
+    line-height: 30px;
+}
+.step-text p{
+    line-height: 30px;    
+}
+
+.project-item img{
+    margin: 10px; 
+    border-radius: 5px;   
+    
+}
+.project-title h1{ 
+    margin: 10px;
+    font-size: 40px;
+    width: 400px;
+}
+
+.learnmore{
+    text-align: center;
+}
+
+.sign-row{
+    display: flex;
+    justify-content: center;
+    
+}
+.signup{
+    width: 40%;
+}
+
+.info-link{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 30px;
+}
+.link-part{
+    width: 300px;
+    line-height: 30px;
+}
+
+.link-part h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.link-part a, .link-part p{
+    text-decoration: none;
+    color: rgb(123, 126, 126);
+}
+
+.send .signup{
+    display: flex;
+    flex-direction: column;    
+    width: 400px; 
+    box-shadow: 0px 0px 5px 0px rgb(221, 216, 216);
+    padding: 10px;    
+}
+.signup input{
+    height: 50px;
+    margin: 15px 0;
+    border:1px solid rgb(107, 112, 112);
+    padding: 5px;
+}
+.signup p{
+    font-size: 50px;
+    line-height: 50px;
+}
+.signup button{
+    width: 80px;
+    height: 30px;
+    background-color: rgb(32, 245, 113);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.learnmore{
+    width: 1200px;
+    height: 300px;
+    
+}
+.learnmore-title{
+    width: 500px;
+    margin: auto;
+    
+}
+.learnmore h2{
+    font-size: 50px;  
+    line-height: 50px;
+    margin-top: 60px;  
+}
+.learnmore input{
+    width: 400px;
+    height: 40px;
+    margin-right: 0;
+}
+
+.learnmore button{
+    height: 40px;
+    background-color: rgb(66, 247, 66);
+    color: rgb(255, 255, 255);
+    margin-left: 0;
+}
