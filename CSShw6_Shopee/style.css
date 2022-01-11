@@ -1,0 +1,333 @@
+body{
+   background-color: rgb(245, 237, 237);
+}
+header{
+    margin-top: 0;    
+    background :linear-gradient(rgb(231, 87, 43),rgb(241, 123, 87)) ;
+    height: 130px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;    
+}
+.container{    
+    width: 1200px;
+    margin: auto; 
+    
+}
+.part1{
+    width: 1200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+      
+}
+.about a{
+    color: white;
+    text-decoration: none;
+}
+.header-icon{
+    width: 15px;
+}
+.help button{
+    margin: 0;
+    border: none;
+    background: none;
+    padding: 0;
+    color: white;
+    font-size: 14px;
+}
+.help a{
+    color: white;
+    text-decoration: none;
+}
+.part2{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.part2 .search{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.search button{
+    position: absolute;
+    top:4px;
+    right:5px;
+    background-color: rgb(231, 87, 43);
+    width: 60px;
+    height: 40px;
+    border-radius: 6px;
+}
+.part2 input{
+    width: 820px;
+    height: 40px;
+    border-radius: 5px;
+}
+.part2 a{
+    color: white;  
+    text-decoration: none;
+    margin-right: 5px;
+    font-size: 15px;
+     
+}
+.part2 .list{
+    line-height: 30px;
+}
+
+.car-icon {
+    width:80px;    
+    text-align: left;
+    margin-top: 10px;
+    
+}
+.banner{
+    width: 1200px;  
+    margin: auto;
+    padding-top: 150px;
+    background-color: white;
+}
+.banner-img{  
+    
+    display: flex;    
+    padding-top: 30px;
+    
+}
+.banner .slider img{
+    width: 796px;    
+    margin-right: 4px;
+}
+.banner .slider-right img{
+    width:400px;
+    margin: 1px;
+    height: 117px;
+}
+.nav-item nav{
+    display: flex;
+    justify-content: space-around;  
+    text-align: center; 
+    padding: 5px;
+}
+nav a{
+    color: rgb(53, 50, 50);
+    font-size: 14px;
+    text-decoration: none;
+    
+}
+nav img{
+    width:50px;
+    padding: 5px;
+}
+.banner-middle{
+    width: 1200px;
+    margin: auto;
+}
+.banner-middle img{
+    padding-top: 20px;
+}
+.banner-middle2{
+    width: 1200px;
+    margin: auto;
+}
+.banner-middle2 .limited{
+    width:1200px;
+    height: 187px;
+}
+.banner-middle2 img{
+    padding-top:15px ;
+    
+}
+.product{
+     
+    background-color: rgb(206, 17, 55);  
+    margin-top: 0; 
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.limited-text{
+    display: flex;
+    justify-content: space-between;
+}
+.product p{
+    color: white;    
+}
+.product a{
+    color: white;
+    text-decoration: none;
+}
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    height: 220px;
+}
+.product-item img{
+    width: 190px;
+}
+.sort{
+    background-color: white;
+    width: 1200px;
+    margin: auto;
+    margin-top: 10px;
+
+}
+.sort nav{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    
+}
+.sort nav img{
+    width: 98px;
+    height: 98px;
+    
+}
+.sort p{
+    line-height: 40px;
+    padding: 20px;
+    color: rgb(48, 46, 46)
+        
+}
+.sort a{
+    border: 0.5px solid rgb(223, 235, 235);
+    padding: 5px;
+}
+.on-sale{
+    width: 1200px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: white;
+    height: 280px;
+    
+}
+.sale-p{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: rgb(219, 33, 33);
+}
+.on-sale-item nav{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+.on-sale-item nav img{
+    width: 150px;
+    height: 170px;
+}
+.on-sale-item nav h3{
+    font-size: 20px;
+}
+.banner3{
+    width:1200px;
+    margin: auto;
+    margin-top: 30px;
+}
+.on-sale2{
+    width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+}
+.on-sale2 .text{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+.on-sale2 .text img{
+    width:20px;
+}
+.text .text-title{
+    color: rgb(219, 33, 33);
+}
+.text span{
+    color: rgb(73, 71, 71);
+}
+.text .all p{
+    color: red;
+}
+.on-sale2 .sale-item{
+    display: flex;
+    padding: 10px;
+}
+.right-item nav{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    
+    
+}
+.right-item nav img{
+    width:190px;
+    height: 190px;
+}
+.right-item nav p{
+    color: red;
+    font-size: 17px;
+}
+.on-sale3{
+    width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    
+    background-color: white;
+}
+.on-sale3 .text{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.text .text-chang{
+    color: red;
+}
+
+.sales3-item{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sales3-item .item-list img{
+    width:145px;
+}
+.item-list{
+    width: 240px;
+    display: flex;
+    padding: 10px;
+    border: 1px solid rgb(248, 247, 244);
+    align-items: center;
+}
+.item-list a{
+    text-decoration: none;
+    color: black;
+    
+}
+.item-list a p{
+    font-size: 12px;
+    padding-top: 5px;
+}
+.on-sale4{
+    width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+}
+.on-sale4 .sale4-text{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: red;
+}
+.on-sale4 .sale4-item{
+    display: flex;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.on-sale4 .sale4-item img{
+    width: 240px;
+}
+
