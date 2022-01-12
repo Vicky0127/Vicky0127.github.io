@@ -104,10 +104,22 @@
 
         let table = document.querySelector("table")
         table.classList.add('container')
-        function createTable(titleArray,dataArray){
-            createTbody(dataArray)
+        function createTable(titleArray,dataArray){            
             createThead(titleArray)
+            createTbody(dataArray)
     
+        }
+        
+        function createThead(titleArray){
+            let thead = document.createElement("thead")            
+            let theadTr = document.createElement("tr")
+            titleArray.forEach(function(item){
+                let th = document.createElement("th")
+                th.innerText = item
+                theadTr.append(th)
+                thead.appendChild(theadTr)
+            })            
+            table.appendChild(thead)
         }
         function createTbody(dataArray){
             let tbody= document.createElement("tbody")
@@ -122,21 +134,9 @@
 
                     tbodyTr.append(td)
                 })
-                tbody.append(tbodyTr)       
+                tbody.appendChild(tbodyTr)       
             })
-            table.append(tbody)
-        }
-        function createThead(titleArray){
-            let thead = document.createElement("thead")            
-            let theadTr = document.createElement("tr")
-            titleArray.forEach(function(item){
-                let th = document.createElement("th")
-                th.innerText = item
-                theadTr.append(th)
-            })
-
-            thead.append(theadTr)
-            table.append(thead)
+            table.appendChild(tbody)
         }
     </script>
 </body>
