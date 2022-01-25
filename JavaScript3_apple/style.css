@@ -1,0 +1,80 @@
+/* 全域設定 */
+.container {
+    max-width: 1024px !important;
+}
+
+/* 處理bootstrap focus */
+
+.btn:focus, /*清除btn按鈕點擊出現的邊框*/
+.btn:active:focus,
+.btn.active:focus,
+button:focus {
+    outline: none !important; box-shadow:none !important; 
+}
+.apple-nav img{
+    width: 40px;
+    height: 40px;
+}
+
+.form-control:focus{ /*清除input框focus出現的邊框*/
+    border-color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+.color-btn {
+    border: 1px solid #dee2e6;
+    position: relative;
+    border-radius: 10px;
+}
+
+.color-btn:hover {
+    border: 1px solid #000000;
+}
+
+.color-btn i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.color-name {
+    font-size: .5rem;
+}
+
+
+.spec-val {
+    font-size: 1.2rem;
+}
+
+.fit {
+    font-size: .5rem;
+}
+
+[selected="true"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid #0071e3;
+    border-radius: 0.25rem;
+}
+
+.accordion-header {
+    position: relative;
+}
+
+button[aria-expanded] {
+    opacity: 1;
+    transition: .5s;
+}
+
+/* 手風琴先關掉 */
+button[aria-expanded='true'] {
+    /* 上面按鈕先不見 */
+    opacity: 0;
+    /* display: none; */
+}
+
