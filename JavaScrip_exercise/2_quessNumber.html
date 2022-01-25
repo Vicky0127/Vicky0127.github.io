@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="game-start">開始遊戲</button>
+    <button class="game-show">看答案</button>
+    <br/>
+    <input type="text">
+    <button class="game-guess">猜</button>
+    <div class="game-history">
+
+    </div>
+
+    <script>
+        let answer = []
+        let guess = []
+
+        //DOM
+        const startBtn = document.querySelector('.game-start')
+        const showBtn = document.querySelector('.game-show')
+        const guessBtn = document.querySelector('.game-guess')
+        const guessInput = document.querySelector('input')
+        const guessHistoryArea = document.querySelector('.game-history')
+
+        window.onload = function() {
+
+            startBtn.onclick = function() {
+                answer = getAnswer()
+                
+               
+            }
+
+            showBtn.onclick = function(){
+                showAnswer()
+            }
+
+            guessBtn.onclick = function(){
+                guessAnswer()
+
+            }
+        }
+
+        function getAnswer(){
+            let result = []
+
+            while(result.length != 4){
+                let rNum = Math.floor(Math.random() * 10)
+                if(!result.includes(rNum)){
+                    result.push(rNum)
+                }
+            }
+            return result
+        }
+
+        function showAnswer(){
+            alert(answer.join(' '))
+        }
+
+        function guessAnswer(){
+            guess = guessInput.value.split('').map(x=> parseInt(x))
+
+            //交集  answer的indexof 找不到 ＝ -1
+            let intersect = guess.filter(x => answer.indexOf(x) != -1)
+            
+            //includes 寫法
+            // let intersect = guess.filter(x => answer.includes(x))
+            
+
+            let a = intersect.filter(x => answer.indexOf(x) == guess.indexOf(x)).length
+            let b = intersect.length - a
+
+            guessHistoryArea.innerHTML += `<p>${a}A${b}B | ${guess.join('')}</p>`
+        }
+
+    </script>
+</body>
+</html>
