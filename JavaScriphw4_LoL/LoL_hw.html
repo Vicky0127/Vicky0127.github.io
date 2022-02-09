@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        .jumbotron h1{
+           text-align: center;
+        }
+        .container{
+            margin: auto;
+        }
+        .card {
+            border: 1px solid black;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .headshot {
+            overflow: hidden;
+        }
+
+        .card-title {
+            color: white;
+            background-color: black;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 5px 15px 5px 15px;
+        }
+
+        .card-body {
+            background-color: #ffbf67;
+        }
+
+        .card:hover {
+            box-shadow: 8px 8px 15px #808080;
+            transform: translate(5px, 5px);
+        }
+
+        .card:hover img {
+            transform: scale(1.2);
+            transition: transform 0.5s;
+        }
+
+        .card:not(:hover) img {
+            transform: scale(1, 1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-body {
+            background-color: lightgreen !important;
+        }
+
+        .card:hover .card-title {
+            color: black;
+            background-color: white !important;
+        }
+
+        .card-body p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container-fluid'>
+        <div class='jumbotron'><h1>英雄聯盟圖鑑</h1></div>
+
+        <div class='row'>
+
+        </div>
+    </div>
+    <div class="container">
+        <template id='cardTemplate'>
+            <div class="card" style="width: 20rem;">
+                <img src="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                    <a href="#"  id="detailbtn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">角色介紹</a>
+                    <a href="#" id="vido-btn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">影片</a>
+                </div>
+            </div>
+        </template>
+    
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <img id="imgLoL">
+                    <div class="modal-body">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+   
+
+    <script>
+        const url = 'https://ddragon.leagueoflegends.com/cdn/10.22.1/data/zh_TW/champion.json'
+
+        let row, cardTemplate;
+       
+        row = document.querySelector('.row');
+
+        window.onload = function () {
+            
+            getLoLJson()
+           
+            cardTemplate = document.querySelector("#cardTemplate")
+        }
+
+        let dataArray = []            
+        function getLoLJson(){
+            const xhr = new XMLHttpRequest()
+
+            xhr.onload = function(){
+                dataArray = JSON.parse(this.response)
+ 
+                Object.values(dataArray.data).forEach((lol, index)=>{
+                    let _card = getCard(lol)
+
+                    row.append(_card)
+                })
+            }
+
+            
+            xhr.open("GET", url)
+            xhr.send()
+        }
+        
+        function getCard(item, imgurl){
+            let cloneCard = cardTemplate.content.cloneNode(true);
+            cloneCard.querySelector("h5").innerText = item.name;
+            cloneCard.querySelector("img").src = `https://cdngarenanow-a.akamaihd.net/games/lol/2020/LOLwebsite/champion/${item.id}_0.jpg`;
+            cloneCard.querySelector("p").innerText = item.blurb;
+
+            cloneCard.querySelector("#detailbtn").addEventListener("click", function(){
+                const modal = document.querySelector("#exampleModal");
+                modal.querySelector("h5").innerText = `${item.name}`
+                let modalbody = document.querySelector(".modal-body")
+                modalbody.innerHTML = ""
+                modalbody.innerHTML = `<p>HP : ${item.stats.hp}</P> <br> <P>Movespeed : ${item.stats.movespeed}</p> <br> <p> Spellblock : ${item.stats.spellblock}</p><br><p>Attackrange : ${item.stats.attackrange}</p>`
+                modal.querySelector("#imgLoL").src = `https://cdngarenanow-a.akamaihd.net/games/lol/2020/LOLwebsite/champion/${item.id}_0.jpg`;
+            
+                
+            })
+
+            cloneCard.querySelector('#vido-btn').addEventListener("click", function(){
+                const modal = document.querySelector("#exampleModal");
+                modal.querySelector("h5").innerText = `${item.name}`
+                let vido = document.querySelector(".modal-body")
+                vido.innerHTML = ""
+                vido.innerHTML = '<iframe width="100%" height="315" src="https://www.youtube.com/embed/wNNQRmx1qhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            })
+
+            return cloneCard
+        }
+
+
+    </script>
+</body>
+
+</html>
